@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header, nav, article, footer{
+    display: block;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    overflow-x:hidden;
+}
+header{
+    width: 100%;
+    height: 650px;
+    background-image: url("img/video.png");
+    position: relative;
+}
+#name{
+    color: #ffffff;
+    font-style: italic;
+    font-family: "Arial Narrow", sans-serif;
+    font-weight: 100;
+    font-size: 32px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+#menu{
+    float:right;
+    width:200px;
+    height:145px;
+    background: #a41b15;
+    border-radius: 0 0 5% 5%;
+    border-bottom: 1px solid #bb221a;
+}
+#sushi{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom:28px;
+}
+.buttons{
+    border-radius: 0 0 5% 5%;
+    border-top: 1px solid #bb221a;
+    height: 34px;
+    width:200px;
+}
+.buttons>li{
+    float: left;
+    list-style: none;
+    width: 83px;
+    color: #ffffff;
+    padding: 8px;
+    display: block;
+    box-sizing: border-box;
+    font-family: "Arial Narrow", sans-serif;
+    font-size: 14px;
+    height: 34px;
+}
+.buttons>li:first-child{
+                        width:34px;
+                        border-right:1px solid #bb221a;
+}
+.buttons>li:last-child{
+    border-left:1px solid #bb221a;
+}
+.buttons>li>img{
+    float: left;
+    margin-right: 15px;
+}
+div.search{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width:280px;
+    background: #ffffff;
+    border-radius: 8px;
+    height:45px;
+    padding-left: 15px;
+}
+div.search>input.poisk{
+    border: none; 
+    outline: none;
+    height: 45px;
+    width:190px;
+    font-style: italic;
+    font-family: "Arial Narrow", sans-serif;
+    color:#d7d3d3;
+}
+div.search>input.poisk:hover{
+cursor: text;
+}
+div.search>.buttonPoisk{
+    background-color: #ad1e17;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+div.search>.buttonPoisk:hover{
+    cursor: pointer;
+}
+div.search>.buttonPoisk>img{
+    margin-right: 5px;
+}
+.big_sushi{
+    position: absolute;
+    top: 42%;
+    left: 54%;
+}
+nav{
+    width: 80%;
+    height: 150px;
+    margin: 100px auto 100px auto;
+}
+nav>h2{
+    color:#522c25;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: 24px;
+    margin-bottom: 55px;
+}
+ul.food{
+    list-style: none;
+    width:100%;
+}
+ul.food > li{
+    float: left;
+    vertical-align: bottom;
+    width: 8.3%;
+    height: 77px;
+}
+ul.food > li > a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                text-align: center;
+                color: #000000;
+                opacity: 0.5;
+                filter: grayscale(100%);
+                transition: 0.5s;
+                font-family: "Arial Narrow", sans-serif;
+                font-size: 14px;
+}
+ul.food > li > a > img{
+                    margin:0 auto 15px auto;
+                    display: block;
+                    height: 30px;
+}
+ul.food > li > a:hover{
+    opacity: 1;
+    filter: grayscale(0%);
+}
+section.products{
+    width: 100%;
+    padding-bottom: 50px;
+    background: url(img/orders/products.png) no-repeat right bottom;
+}
+div.left-right{
+    float: right;
+    margin-right: 170px;
+}
+div.left-right > button{
+                        background: none;
+                        border: none;
+                        outline: none;
+}
+div.left-right > button:first-child{
+    margin-right: 10px;
+}
+.orders{
+padding-top: 120px;
+width: 100%;
+height: 500px;
+}
+li.order{
+    float: left;
+    width: 201px;
+    height: 251px;
+    background-image: url(img/orders/back.png);
+    list-style: none;
+    position: relative;
+    margin-right: 3%;
+}
+li.order > img{
+    position: absolute;
+    left: 10%;
+    bottom: 60%;
+}
+li.order:first-child{
+    margin-left: 10%;
+}
+li.order > h3{
+    margin-top: 115px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: #401710;
+}
+p.pieces{
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 12px;
+    color:#d6d6d6;
+}
+p.description{
+    display: block;
+    width: 180px;
+    text-align: center;
+    font-size: 12px;
+    color:#d6d6d6;
+    margin: 10px auto 0 auto;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+li.order > button{
+    border: none;
+    background: none;
+    outline: none;
+    transition-property: background-color, opacity;
+    transition-duration: 0.2s;
+    margin-left: 5px;
+    position:absolute;
+    bottom: 6px;
+    text-align: center;
+    width: 190px;
+    height:50px;
+    border-radius: 0 0 5% 5%;
+    color: #a41b15;
+    cursor: pointer;
+}
+li.order > button:active {
+    background-color: #a41b15;
+    opacity: 0.8;
+}
+section.reviews{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-color: #a41b15;
+    margin-bottom: 370px;
+}
+section.reviews > .svg{
+    position: absolute;
+    bottom: -40%;
+    width: 100%;
+    z-index: 1000;
+}
+.review{
+    width: 480px;
+    height: 480px;
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    bottom: 11%;
+    right: 12%;
+    border-radius: 1%;
+}
+.who{
+    padding-top: 30px;
+    padding-right: 15px;
+    padding-left: 40px;
+
+}
+.who > .photo{
+    float: right;
+}
+.who > .text{
+    color: #a0a0a0;
+    font-family: "Arial Narrow", sans-serif;
+    font-size: 15px;
+    display: block;
+    width: 280px;
+    margin-top: 5px;
+}
+.who > .signature{
+    color: #000000;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    margin-top: 20px;    
+    float: left;
+}
+.who > .date{
+    margin-top: 21px; 
+    margin-left: 150px;
+    font-size: 12px;
+    font-family: "Arial", sans-serif;
+    color: #a0a0a0;
+}
+.review > button{
+    border: none;
+    outline: none;
+    background: none;
+    margin-left: 20%;
+    margin-top: 20px;
+    transition-property: margin-top;
+    transition: 0.1s;
+    cursor: pointer;
+}
+.review > button:active{
+    margin-top: 25px;
+}
+.gallery{
+    width: 55%;
+}
+.aboutUs{
+    width: 100%;
+    height: 500px;
+    background-color: #a41b15;
+    padding-top: 370px;
+}
+.gallery > img{
+    float: left;
+    margin: 0;
+}
+.noneFloat{
+    float: none;
+}
+.textAbout{
+    width: 50%;
+    height:500px;
+    margin-left: 52%;
+    z-index: 999;
+    background:url(img/inst/background.png) no-repeat;
+    color: white;
+    position: relative;
+}
+.textAbout h3{
+    position: absolute;
+    text-align: right;
+    font-family: "Arial Narrow", sans-serif;
+    top: 46%;
+    left: 60%;
+    font-style: italic;
+    font-size: 32px;
+}
+.textAbout p{
+    position: absolute;
+    text-align: right;
+    font-family: "Arial Narrow", sans-serif;
+    top: 56%;
+    left: 12%;
+    font-style: italic;
+    font-size: 16px;
+    display: block;
+    width: 450px;
+}
+footer{
+    height: 71px;
+    width: 100%;
+    background: url(img/footer.png);
+    outline: 1px solid #dfdfdf;
+    margin-bottom: 20px;
+    padding: 0 150px 0 150px;
+}
+footer > ul{
+    list-style: none;
+    margin: 0 auto;
+}
+footer > ul > li{
+                display: block;
+                width: 200px;
+                height: 71px;
+                border-right: 1px solid #dfdfdf;
+                float: left;
+                color:#c9c9c9;
+                text-align: center;
+                padding-right: 15px;
+                padding-top: 20px;
+                box-sizing:border-box;
+                font-family: "Arial", sans-serif;
+}
+footer > ul > li.folow > p{
+                    float: left;
+                    margin-left: 22%;
+                    margin-top: 6px;
+    }
+footer > ul > li.folow > a {
+                    float: right;
+                    margin: 5px;
+                    display: block;
+}
+footer > ul > li.two > a {
+    float: left;
+    margin: 5px 20px;
+    display: block;
+}
+footer > ul > li.two > p{
+    float: left;
+    margin-top: 6px;
+}
+footer > ul > li:last-child{
+                border: none;
+                width: 700px;
+}
+footer > ul > li.last{
+    padding-left: 30px;
+    padding-top: 15px;
+}
+footer > ul > li.last > p{
+    float: left;
+    margin-top: 10px;
+}
+div.email{
+    width:280px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    height:45px;
+    padding-left: 15px;
+    float: left;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+div.email>input.adress{
+    border: none; 
+    outline: none;
+    height: 45px;
+    width:190px;
+    font-style: italic;
+    background: #e0e0e0;
+    font-family: "Arial Narrow", sans-serif;
+    color:#959595;
+}
+div.email>input.adress{
+cursor: text;
+}
+div.email>.buttonEmail{
+    background-color: #be231b;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+div.email>.buttonEmail:hover{
+cursor: pointer;
+}
+.company{
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color:#cccccc;
+}
+.company > img{
+    margin: 0px 20px;
+}
