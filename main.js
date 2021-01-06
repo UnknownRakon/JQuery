@@ -20,3 +20,15 @@ $(document).ready(function () {
             $(this).css({'background-color' : '#a41b12', 'color' : '#fff'})    
         })
     })
+$(document).ready(function () {
+    $('#reviewButt').click(
+        function () {
+            $('div.who').find('img.photo').replaceWith('<img src="img/reviews/foto2.png" class="photo">')
+        }
+    )
+    $('#reviewButt').dblclick(
+        function () {
+            $('div.who').find('img.photo').replaceWith('<img src="img/reviews/foto.png" class="photo">')
+        }
+    )
+})
