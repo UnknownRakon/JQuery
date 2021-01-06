@@ -29,13 +29,16 @@ header{
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
-#menu{
+.menu{
     float:right;
     width:200px;
     height:145px;
     background: #a41b15;
     border-radius: 0 0 5% 5%;
     border-bottom: 1px solid #bb221a;
+}
+.none{
+    border-radius: 0;
 }
 #sushi{
     display: block;
@@ -73,6 +76,27 @@ header{
     float: left;
     margin-right: 15px;
 }
+.menu_body {
+    display:none; 
+    width:200px;
+    list-style: none;
+    margin-top: 25px;
+    right:0;
+    z-index: 9999;
+    position: absolute;
+}
+.menu_body li{
+    background: #a41b15;
+}
+.menu_body li a{color:#FFFFFF; 
+    text-decoration:none; 
+    padding:10px; 
+    display:block;
+}
+.menu_body li a:hover{
+    padding:15px 10px; 
+    font-weight:bold;
+}	
 div.search{
     position: absolute;
     top: 40%;
@@ -455,3 +479,4 @@ cursor: pointer;
 .company > img{
     margin: 0px 20px;
 }
+	
