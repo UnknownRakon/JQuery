@@ -13,3 +13,10 @@ $(document).ready(function () {
             $(this).animate({ fontSize: "12px", paddingLeft: "10px" }, 50 );    
         });
     });
+$(document).ready(function () {	   
+    $('li.order').find('button').click(
+        function () {	
+            $(this).html('<p>added</p>');
+            $(this).css({'background-color' : '#a41b12', 'color' : '#fff'})    
+        })
+    })
