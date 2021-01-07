@@ -10,6 +10,12 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+        <script>
+            // init controller
+            var controller = new ScrollMagic.Controller();
+        </script>
     </head>
     <body>
         <main>
@@ -62,38 +68,39 @@
                         <button><img src="img/products/left.png"></button>
                         <button><img src="img/products/right.png"></button>
                     </div>
+                    <div id="trigger2"></div>    
                     <div class="orders"> 
                         <ul>
                             <li class="order">
-                                <img src="img/orders/1.png">
+                                <img src="img/orders/1.png" class="reveal1">
                                 <h3>Salmon avocado</h3>
                                 <p class="pieces">8 pieces</p>
                                 <p class="description">Salmon with avocado, cucumber, rice, nori.</p>
                                 <button><p>£18</p></button>
                             </li>
                             <li class="order">
-                                <img src="img/orders/2.png">
+                                <img src="img/orders/2.png" class="reveal1">
                                 <h3>Salmon maki</h3>
                                 <p class="pieces">8 pieces</p>
                                 <p class="description">Salmon maki with rice, nori.</p>
                                 <button><p>£12</p></button>
                             </li>  
                             <li class="order">
-                                <img src="img/orders/3.png">
+                                <img src="img/orders/3.png" class="reveal1">
                                 <h3>Avocado Kaburimaki</h3>
                                 <p class="pieces">8 pieces</p>
                                 <p class="description">Avocado Kaburimaki with tobiko, rice, nori.</p>
                                 <button><p>£18</p></button>
                             </li>  
                             <li class="order">
-                                <img src="img/orders/4.png">
+                                <img src="img/orders/4.png" class="reveal1">
                                 <h3>Salmon Kaburimaki</h3>
                                 <p class="pieces">8 pieces</p>
                                 <p class="description">Salmon Kaburimaki with avocado, tobiko, sesame seeds, rice, nori.</p>
                                 <button><p>£20</p></button>
                             </li>  
                             <li class="order">
-                                <img src="img/orders/5.png">
+                                <img src="img/orders/5.png" class="reveal1"> 
                                 <h3>Avocado maki</h3>
                                 <p class="pieces">8 pieces</p>
                                 <p class="description">Avocado, cucumber, sesame seeds, sweet soy, rice, nori.</p>
@@ -162,8 +169,9 @@
                         </div>
                         <button id="reviewButt"><img src="img/reviews/Tripadvisor.png"></button>
                     </div>
-                    <div class="aboutUs">    
-                        <div class="gallery">
+                    <div class="aboutUs">
+                        <div id="trigger"></div>    
+                        <div class="gallery" id="reveal1">
                                 <img src="img/inst/one.png">
                                 <img src="img/inst/two.png">
                                 <img src="img/inst/three.png">
@@ -195,5 +203,24 @@
             <p class="company"><img src="img/heart.png">We Boomin © 2020</p>
         </main>
         <script src="main.js" type="text/javascript"></script>
+        <script>
+            // build scene
+            new ScrollMagic.Scene({
+                                triggerElement: "#trigger",
+                                triggerHook: 0.9, // show, when scrolled 10% into view
+                                duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+                                offset: 50 // move trigger to center of element
+                            })
+                            .setClassToggle("#reveal1", "visible") // add class to reveal
+                            .addTo(controller);
+            new ScrollMagic.Scene({
+                                triggerElement: "#trigger2",
+                                triggerHook: 0.9, // show, when scrolled 10% into view
+                                duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+                                offset: 50 // move trigger to center of element
+                            })
+                            .setClassToggle(".reveal1", "visible") // add class to reveal
+                            .addTo(controller);
+    </script>
     </body>
 </html>
