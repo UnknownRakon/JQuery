@@ -31,4 +31,28 @@ $(document).ready(function () {
             $('div.who').find('img.photo').replaceWith('<img src="img/reviews/foto.png" class="photo">')
         }
     )
+    $('img.photo').hover(
+        function () {
+            $('p.text').show()
+        }
+    )
+    $('img.big_sushi').click(
+        function (){
+            $(this).offset({top:250, left:570})
+        }
+    )
+    $('li.order').find('img').mouseover(
+        function () {	
+            $(this).addClass('bordered');    
+        });	
+    $('li.order').find('img').mouseout(
+        function () {	
+            $(this).removeClass('bordered');    
+        });	
+    $( ".hide-option" ).tooltip({
+        hide: {
+            effect: "explode",
+            delay: 250
+            }
+    });
 })
